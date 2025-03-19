@@ -172,7 +172,7 @@ async def generate_qr_code(request: Url,header: Request):
 
         img.save("./qrcodes/" + filename)
 
-        #Convert the QR code image to a base 64-encoded string
+        #Convert the QR code image to a base 64-encoded string 
         buffered = io.BytesIO()
         img.save(buffered, format="PNG")
         imgStr = base64.b64encode(buffered.getvalue()).decode("utf-8")
